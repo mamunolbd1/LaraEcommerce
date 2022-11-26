@@ -1,0 +1,12 @@
+/* Product Image style */
+
+.product-img{
+    width: 10rem;
+     height:5rem;
+}
+.product-col{
+    margin-bottom: 10px;
+}
+/* .product-card{
+    width: 9rem;
+} */
