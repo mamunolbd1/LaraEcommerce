@@ -8,73 +8,23 @@
             <div class="widget">
                 <h1>All Product</h1>
                 <div class="row">
+                    
+                    @foreach($products as $product)
+                        <div class="col-md-3 product-col">
+                            <div class="card product-card" >
 
-                    <div class="col-md-3 product-col">
-                        <div class="card product-card" >
-                            <img src="{{ asset('images/products/1.jpg') }}" class="card-img-top product-img " alt="Product Image">
+                                @foreach($product->image as $image)
+                                    <img src="{{ asset('images/products/'.$image->image) }}" class="card-img-top product-img " alt="Product Image">
+                                @endforeach
 
-                            <div class="card-body text-center">
-                                <h5 class="card-title">I Phone-10</h5>
-                                <p class="card-text">price- 22200Tk</p>
-                                <a href="#" class="btn btn-outline-warning">Add Cart</a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ $product->title }}</h5>
+                                    <p class="card-text">price- {{ $product->price}}Tk</p>
+                                    <a href="#" class="btn btn-outline-warning">Add Cart</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 product-col">
-                        <div class="card product-card" >
-                            <img src="{{ asset('images/products/1.jpg') }}" class="card-img-top product-img " alt="Product Image">
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title">I Phone-10</h5>
-                                <p class="card-text">price- 22200Tk</p>
-                                <a href="#" class="btn btn-outline-warning">Add Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-col">
-                        <div class="card product-card" >
-                            <img src="{{ asset('images/products/1.jpg') }}" class="card-img-top product-img " alt="Product Image">
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title">I Phone-10</h5>
-                                <p class="card-text">price- 22200Tk</p>
-                                <a href="#" class="btn btn-outline-warning">Add Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-col">
-                        <div class="card product-card" >
-                            <img src="{{ asset('images/products/1.jpg') }}" class="card-img-top product-img " alt="Product Image">
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title">I Phone-10</h5>
-                                <p class="card-text">price- 22200Tk</p>
-                                <a href="#" class="btn btn-outline-warning">Add Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-col">
-                        <div class="card product-card" >
-                            <img src="{{ asset('images/products/1.jpg') }}" class="card-img-top product-img " alt="Product Image">
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title">I Phone-10</h5>
-                                <p class="card-text">price- 22200Tk</p>
-                                <a href="#" class="btn btn-outline-warning">Add Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-col">
-                        <div class="card product-card" >
-                            <img src="{{ asset('images/products/1.jpg') }}" class="card-img-top product-img " alt="Product Image">
-
-                            <div class="card-body text-center">
-                                <h5 class="card-title">I Phone-10</h5>
-                                <p class="card-text">price- 22200Tk</p>
-                                <a href="#" class="btn btn-outline-warning">Add Cart</a>
-                            </div>
-                        </div>
-                    </div>
+                   @endforeach
 
                 </div>
             </div>
