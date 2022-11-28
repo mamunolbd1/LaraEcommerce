@@ -12,10 +12,18 @@
                     @foreach($products as $product)
                         <div class="col-md-3 product-col">
                             <div class="card product-card" >
+                                @php 
+                                    $i=1;
+                                @endphp
 
                                 @foreach($product->image as $image)
-                                    <img src="{{ asset('images/products/'.$image->image) }}" class="card-img-top product-img " alt="Product Image">
-                                @endforeach
+                                    @if($i>0)
+                                        <img src="{{ asset('images/products/'.$image->image) }}" class="card-img-top product-img {{ $i==1 ? 'active':'' }} " alt="Product Image">
+                                    @endif
+                                    @php
+                                        $i-- ;
+                                    @endphp
+                                @endforeach 
 
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ $product->title }}</h5>

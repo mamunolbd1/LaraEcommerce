@@ -10,10 +10,12 @@
               </div>
             </div>
           </li>
+
           <li class="nav-item"><a class="nav-link" href="index.html"><img class="menu-icon" src="{{ asset('images/menu_icons/01.png') }}" alt="menu icon"><span class="menu-title">Dashboard</span></a></li>
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="{{ asset('images/menu_icons/08.png') }}" alt="menu icon"> <span class="menu-title">Manage Products</span><i class="menu-arrow"></i></a>
+
             <div class="collapse" id="general-pages">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{ route('admin.product.create') }}">Manage Product</a></li>
@@ -21,7 +23,6 @@
               </ul>
             </div>
           </li>
-
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#categories" aria-expanded="false" aria-controls="categories"> <img class="menu-icon" src="{{ asset('images/menu_icons/08.png') }}" alt="menu icon"> <span class="menu-title">Manage Categories</span><i class="menu-arrow"></i></a>

@@ -10,8 +10,9 @@
                     <h2 class="">Add Product</h2>
             </div>
             <div class="card-body">
-                <form action="{{ route('admin.product.store') }}" method="post">
+                <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
+                    @include('backend.partials.messages')
                     <div class="form-group">
                         <label for="exampleInputEmail1">Title</label>
                         <input type="name" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Title">
